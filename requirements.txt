@@ -1,0 +1,14 @@
+# Required: the app, evaluation, and fallback pipeline run with these alone.
+streamlit>=1.30
+pandas>=1.5
+numpy>=1.24
+scikit-learn>=1.3
+
+# Optional: only needed for the optional backends. The app and evaluation
+# run fully offline without them, using the NumPy TF-IDF retriever and the
+# transparent evidence-grounded fallback classifier. Install only if you
+# want to try the local LLM / embedding paths (see README.md).
+# sentence-transformers>=2.0  # embedding retrieval (DUA_RETRIEVAL_BACKEND=embeddings)
+# transformers>=4.36          # local FLAN-T5 classification (DUA_CHECK_LLM=1)
+# torch>=2.0                  # required by transformers/sentence-transformers (CPU build is fine)
+# pypdf>=4.0                  # PDF upload in the Streamlit app (text paste works without it)
